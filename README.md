@@ -1,4 +1,9 @@
 ![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/1.png)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/1.JPG)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/2.JPG)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/3.JPG)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/4.JPG)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/5.JPG)
 
 
 # Getting Started with Create React App
