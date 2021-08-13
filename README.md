@@ -1,4 +1,4 @@
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of phone1](https://github.com/DSPsai/InternshipBreakingBad/raw/main/images/1.png)
 
 
 # Getting Started with Create React App
