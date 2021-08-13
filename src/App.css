@@ -62,6 +62,16 @@ height: 150px;
 ul{
   padding-left: 0px;
 }
+ /* Card image loading */
+ .card__image img {
+  height: 220px;
+  width: 180px;
+}
+
+.card__image.loading {
+  height: 220px;
+  width: auto;
+}
 /* The loading Class */
 .loading {
   position: relative;
@@ -69,6 +79,24 @@ ul{
   background-color: #e2e2e2;
 }
 
+    /* Card description */
+    .card__description {
+      padding: 8px;
+      font-size: 16px;
+  }
+    .app .card__title.loading{
+      height: 20px;
+      margin-top: 10px;
+      width: auto;
+    }
+  .card__description.loading {
+      height: 3rem;
+      margin: 1rem;
+      width:auto !important;
+      margin-left: 0px;
+      border-radius: 3px;
+  }
+ 
 /* The moving element */
 .loading::after {
   display: block;

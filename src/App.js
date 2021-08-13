@@ -9,7 +9,18 @@ function App() {
   let [count, setcount] = useState([]);                               //page no count
   let [result,setResult]=useState('')                                 //display text when filter called
   let [dummycharcters2, setDum] = useState([{ name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] }]);
-  let [characters, setCharacters] = useState([{ name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] }]);  //initialization of character to overcome error in before fetching data
+  let [characters, setCharacters] = useState([
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },
+    { name: '', status: '', nickname: '', birthday: '', portrayed: '', img: '', occupation: [], appearance: [1, 2, 3, 4, 5] },  
+  ]);  //initialization of character to overcome error in before fetching data
   
    //pre-call function to fetch data
   async function apicall() {                                     
@@ -119,7 +130,7 @@ function App() {
         </div><br/>
         <div className='filter' style={{width:'100%',height:'30px'}}>{result}</div>
         {characters.map((char, index) => (
-          <CardItem                                     //card items in a loop
+          characters[0].name!=''?<CardItem                                     //card items in a loop
             key={index}
             id={index}
             imgsrc={char.img}
@@ -131,7 +142,15 @@ function App() {
             portrayed={char.portrayed}
             apperance={char.appearance}
             char_id={char.char_id}
-          />))}
+          />:
+          <div class="card">
+                                <div class="card__image loading"></div>
+                                <div class="card__title loading"></div>
+                                <div class="card__title loading"></div>
+                                <div class="card__title loading"></div>
+                                <div class="card__title loading"></div>
+                            </div>))
+        }
           <div onClick={()=>document.getElementsByClassName('filterblock')[0].style.display='block'} className='filtershow'>Show Filter</div>
         <div className='page' style={{display:result!=''?'none':'block'}}>{count.map((char, index) => (
           <p onClick={() => changePage(index)}>{index + 1}</p>
